@@ -37,9 +37,9 @@ echo "Done"
 echo ""
 echo "Converting SRA files to fastq.gz"
 ls -p | grep SRR > sra_dirs
-while read i; do mv "$i"*.sra .; done<sra_dirs
-SRA= ls -1 *.sra
-for SRA in *.sra; do fastq-dump --gzip ${SRA}
+while read i; do mv "$i"*.sralite .; done<sra_dirs
+SRA= ls -1 *.sralite
+for SRA in *.sralite; do fastq-dump --gzip ${SRA}
 done
 
 ##################################################################################
@@ -124,6 +124,8 @@ elapsed=`expr $end - $begin`
 echo Time taken: $elapsed
 
 mdate=`date +'%d/%m/%Y %H:%M:%S'`
+# NOTE: If you are running a mac and having trouble with the code below,
+# ----- try using 'vm_stat' instead of 'vmstat'
 mcpu=$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]%
 mmem=`free | grep Mem | awk '{print $3/$2 * 100.0}'`
 echo "$mdate | $mcpu | $mmem" >> ./stats-cpu
