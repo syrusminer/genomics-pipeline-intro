@@ -316,6 +316,12 @@ You can see the parameters required for the script by looking at the help menu:
 bash bash_scripts/genomics-pipeline-intro.sh -h
 ```
 
+You should also check out the script itself. You may not understand some of it (or most of it), but it is sometimes useful to see how parameters are being used within the script.
+```
+less bash_scripts/genomics-pipeline-intro.sh
+```
+>note: to escape reader mode in less, simply type `q`
+
 Now that you have examined the script, run it.
 
 ```
