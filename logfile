@@ -1,7 +1,0 @@
-genomics-pipeline-intro.sh [-h] [-l <SRA_list>] [-g <reference_genome.fasta>] [-a <Frequency>] [-t <threads>]
-This program will call variants using freebayes in given SRA NGS sequences files to obtain major viral variants.
-    -h  show this help text
-    -l  File or path to SRA accession list in tabular format
-    -g  PATH where the SARS-CoV-2 reference genome (in fasta format) is located. If the genome is located in the working folder, just specify the name.
-    -a  A number between (0-1) indicating Viral Frequency for Freebayes variant calling (i.e.: 0.5 = 50% viral frequency).
-    -t  Number of CPU processors
