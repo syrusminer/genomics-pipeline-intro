@@ -169,7 +169,7 @@ The header section precedes the alignment section, and each heading begins with 
 
 # <a name="sam-alignment-section"></a>
 #### 2) SAM Alignment Section
-The alignment section requires 11 tab-separated fields, and additional fields are optional. Each line within this section represents the alignment of a segment to the reference. The 11 required sections include information on the query template (read that mapped), the reference sequence name (SN), the position on reference where the query template mapped, the mapping quality, the sequence itself, and the quality score for each position in the base pair. Simplified descriptions of each required field are within the table in the [looking at a .SAM file](sam-example) section.
+The alignment section requires 11 tab-separated fields, and additional fields are optional. Each line within this section represents the alignment of a segment to the reference. The 11 required sections include information on the query template (read that mapped), the mapping outcome, the reference sequence name (SN), the position on reference where the query template mapped, the mapping quality, the sequence itself, and the quality score for each position in the base pair. Simplified descriptions of each required field are within the table in the [looking at a .SAM file](sam-example) section.
 
 
 # <a name="sam-example"></a>
@@ -183,7 +183,7 @@ You'll see that there are many @SQ header lines (one for each of the reference s
 | Col |  Field     | Type   |  Description                                                                  |  Value             |
 |:---:|:----------:|:------:|:-----------------------------------------------------------------------------:|:------------------:|
 |  1  |  QNAME     | string |  query template name                                                          |  D3NH...:4262:2214 |
-|  2  |  FLAG      | int    |  bitwise flag                                                                 |  99                |
+|  2  |  FLAG      | int    |  bitwise flag of mapping outcome (0 = mapped, 4 = unmapped)                   |  99                |
 |  3  |  RNAME     | string |  ref sequence name                                                            |  NC_045541.1       |
 |  4  |  POS       | int    |  1-based leftmost mapping position                                            |  72165682          |
 |  5  |  MAPQ      | ing    |  mapping quality                                                              |  60                |
