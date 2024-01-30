@@ -169,7 +169,7 @@ The header section precedes the alignment section, and each heading begins with 
 
 # <a name="sam-alignment-section"></a>
 #### 2) SAM Alignment Section
-The alignment section requires 11 tab-separated fields, and additional fields are optional. Each line within this section represents the alignment of a segment to the reference. The 11 required sections include information on the query template (read that mapped), the mapping outcome, the reference sequence name (SN), the position on reference where the query template mapped, the mapping quality, the sequence itself, and the quality score for each position in the base pair. Simplified descriptions of each required field are within the table in the [looking at a .SAM file](sam-example) section.
+The alignment section requires 11 tab-separated fields, and additional fields are optional. Each line within this section represents the alignment of a segment to the reference. The 11 required sections include information on the query template (read that mapped), the mapping outcome, the reference sequence name (SN), the position on reference where the query template mapped, the mapping quality, the sequence itself, and the quality score for each position in the base pair. Simplified descriptions of each required field are within the table in the [looking at a .SAM file](#sam-example) section.
 
 
 # <a name="sam-example"></a>
@@ -192,11 +192,11 @@ You'll see that there are many @SQ header lines (one for each of the reference s
 |  8  |  PNEXT     | int    |  position of the mate/next read                                               |  72165982          |
 |  9  |  TLEN      | int    |  template length                                                              |  399               |
 |  10 |  SEQ       | string |  segment sequence                                                             |  TACTTATGTTCT...   |
-|  11 |  QUAL      | string |  [ASCII score](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.html) of base quality                                                  |  @DCC?CCEC>CE...   |
+|  11 |  QUAL      | string |  [ASCII score](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_understanding_quality_scores.pdf) of base quality                                                  |  @DCC?CCEC>CE...   |
 
 # <a name="vcf"></a>
 ## .VCF
-Variant call format (VCF) files are text-based genomic files with information on sequence variation. More specifically, it includes sites where multiple characters are present in the samples examined. A VCF file contains a <b>[header section](vcf-header-section)</b> and a <b>[variant data section](vcf-data-section)</b>. Basic VCF files do not contain information on every position from the FASTQ or reference file, rather they include information on the genomic positions with sequence variation. As you probably gathered, that makes these files smaller than the FASTQ and SAM files (and the less variation, the smaller the file). Here is an abbreviated example of header and alignment lines within a VCF file:
+Variant call format (VCF) files are text-based genomic files with information on sequence variation. More specifically, it includes sites where multiple characters are present in the samples examined. A VCF file contains a <b>[header section](#vcf-header-section)</b> and a <b>[variant data section](#vcf-data-section)</b>. Basic VCF files do not contain information on every position from the FASTQ or reference file, rather they include information on the genomic positions with sequence variation. As you probably gathered, that makes these files smaller than the FASTQ and SAM files (and the less variation, the smaller the file). Here is an abbreviated example of header and alignment lines within a VCF file:
 
 ##### abbreviated VCF file
 
