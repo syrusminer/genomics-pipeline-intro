@@ -22,7 +22,7 @@ This repository provides an introduction to basic techniques in genomic processi
 
 # <a name="getting-set-up"></a>
 # Getting set up
-If you are here as a UTU student taking BIOL 3300, you should do the following:
+If you are here as a UTU student taking BIOL 4310, you should do the following:
 
 1.  Login to your [Github](https://github.com/) account.
 
