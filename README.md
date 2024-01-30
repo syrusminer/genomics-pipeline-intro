@@ -124,7 +124,7 @@ The second line contains the sequence itself (string of nucleotides). The sequen
 
 # <a name="fastq-qual-score"></a>
 #### 3) FASTQ Quality Score
-The fourth line contains a quality score for each position of the sequence. Each character represents a number based on ASCII coding (see this [link](https://bioinformaticsworkbook.org/introduction/fastqquality-score-encoding.html#gsc.tab=0) and this [link](https://people.duke.edu/~ccc14/duke-hts-2018/bioinformatics/quality_scores.html) for the relationship between symbols and quality score value). On this scale, 0 ('!') is the lowest value, and 40 ('I') is the highest value. Because each score corresponds to a site within the sequence itself, the number of score symbols must equal the number of positions in the sequence.
+The fourth line contains a quality score for each position of the sequence. Each character represents a number based on ASCII coding (see this [link](https://en.wikipedia.org/wiki/FASTQ_format) and this [link](https://people.duke.edu/~ccc14/duke-hts-2018/bioinformatics/quality_scores.html) for the relationship between symbols and quality score value). On this scale, 0 ('!') is the lowest value, and 40 ('I') is the highest value. Because each score corresponds to a site within the sequence itself, the number of score symbols must equal the number of positions in the sequence.
 
 #### Looking at a FASTQ file
 Let's look at an example FASTQ file. These files can be very large, but example.fastq is an abbreviated file that can be opened in your text editor. If on the command line, you can examine this file using ```vim example.fastq```. 
