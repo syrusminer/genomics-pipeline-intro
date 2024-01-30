@@ -154,7 +154,7 @@ For the purposes of this introduction, you don't need to worry about all of thes
 
 # <a name="sam"></a>
 ## .SAM
-Sequence alignment map (SAM) files are text-based genomic files with biological sequence data aligned to a reference sequence. SAM files contain a <b>[header section](sam-header-section)</b> and an <b>[alignment section](sam-alignment-section)</b>. They contain the same information as the FASTQ file, with additional information on mapping details. As you probably gathered, that makes these files larger than the FASTQ files. To increase computational efficiency, SAM files can be converted into a <b>binary alignment Map (BAM)</b> file. BAM files are much smaller than SAM files, and this conversion is commonly done in genomic processing. Here is an example of header and alignment lines within a SAM file:
+Sequence alignment map (SAM) files are text-based genomic files with biological sequence data aligned to a reference sequence. SAM files contain a <b>[header section](#sam-header-section)</b> and an <b>[alignment section](#sam-alignment-section)</b>. They contain the same information as the FASTQ file, with additional information on mapping details. As you probably gathered, that makes these files larger than the FASTQ files. To increase computational efficiency, SAM files can be converted into a <b>binary alignment Map (BAM)</b> file. BAM files are much smaller than SAM files, and this conversion is commonly done in genomic processing. Here is an example of header and alignment lines within a SAM file:
 
 ```
 @SQ SN:NC_045541.1  LN:186725308
