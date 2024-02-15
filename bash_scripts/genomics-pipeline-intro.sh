@@ -38,8 +38,10 @@ echo ""
 echo "Converting SRA files to fastq.gz"
 ls -p | grep SRR > sra_dirs
 while read i; do mv "$i"*.sralite .; done<sra_dirs
-SRA= ls -1 *.sralite
-for SRA in *.sralite; do fastq-dump --gzip ${SRA}
+SRA=$(ls -1*.sralite)
+
+for SRA in $SRA; do 
+  fastq-dump --gzip ${SRA}
 done
 
 ##################################################################################
@@ -101,9 +103,14 @@ for f in *.bam; do samtools index ${f}; done
 echo "Performing Variant Calling with freebayes:"
 echo ""
 
-x= ls -1 *.bam
-for x in *.bam; do freebayes-parallel <(fasta_generate_regions.py ${g}.fai 2000) ${t} -f ${g} -F ${a} -b ${x} > ${x}.freebayes.vcf
-done
+ls *.bam > bam_files.txt
+echo "in for loop"
+while read x
+do
+  echo $x
+  echo $g
+  freebayes -f ${g} $x > ${x}.freebayes.vcf
+done < bam_files.txt
 
 #######################################
 ### Merging variants using jacquard ###

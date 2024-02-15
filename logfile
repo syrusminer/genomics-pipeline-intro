@@ -1,0 +1,69 @@
+Downloading SRA files from the given list of accessions
+
+2024-02-13T21:50:26 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:27 prefetch.3.0.10: 1) 'SRR11851929.lite' is found locally
+2024-02-13T21:50:27 prefetch.3.0.10: 'SRR11851929' has 0 unresolved dependencies
+
+2024-02-13T21:50:27 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:28 prefetch.3.0.10: 2) 'SRR11772640.sralite' is found locally
+2024-02-13T21:50:28 prefetch.3.0.10: 'SRR11772640' has 0 unresolved dependencies
+
+2024-02-13T21:50:28 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:29 prefetch.3.0.10: 3) 'SRR11621811.lite' is found locally
+2024-02-13T21:50:29 prefetch.3.0.10: 'SRR11621811' has 0 unresolved dependencies
+
+2024-02-13T21:50:29 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:29 prefetch.3.0.10: 4) 'SRR12045940.lite' is found locally
+2024-02-13T21:50:29 prefetch.3.0.10: 'SRR12045940' has 0 unresolved dependencies
+
+2024-02-13T21:50:30 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:30 prefetch.3.0.10: 5) 'SRR12272284.lite' is found locally
+2024-02-13T21:50:30 prefetch.3.0.10: 'SRR12272284' has 0 unresolved dependencies
+
+2024-02-13T21:50:31 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:31 prefetch.3.0.10: 6) 'SRR11953870.lite' is found locally
+2024-02-13T21:50:31 prefetch.3.0.10: 'SRR11953870' has 0 unresolved dependencies
+
+2024-02-13T21:50:32 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:32 prefetch.3.0.10: 7) 'SRR11954244.lite' is found locally
+2024-02-13T21:50:32 prefetch.3.0.10: 'SRR11954244' has 0 unresolved dependencies
+
+2024-02-13T21:50:33 prefetch.3.0.10: Current preference is set to retrieve SRA Lite files with simplified base quality scores.
+2024-02-13T21:50:34 prefetch.3.0.10: 8) 'SRR12291581.lite' is found locally
+2024-02-13T21:50:34 prefetch.3.0.10: 'SRR12291581' has 0 unresolved dependencies
+SRA files were downloaded in current directory
+
+Done
+
+Converting SRA files to fastq.gz
+Trimming downloaded Illumina datasets with fastp.
+
+SRR11621811.fastq.gz
+SRR11772640.fastq.gz
+SRR11851929.fastq.gz
+SRR11953870.fastq.gz
+SRR11954244.fastq.gz
+SRR12045940.fastq.gz
+SRR12272284.fastq.gz
+SRR12291581.fastq.gz
+Indexing Reference
+
+Aligning illumina datasets againts reference with minimap, using n threads.
+
+Renaming files in bash
+
+Indexing BAM files.
+
+*.bam
+Performing Variant Calling with freebayes:
+
+in for loop
+*.bam
+covid19-refseq.fasta
+Merging variants using jacquard
+
+for information, please see: https://jacquard.readthedocs.io/en/v0.42/overview.html#why-would-i-use-jacquard
+
+Merge VCFs using jacquard
+
+Time taken: 10
